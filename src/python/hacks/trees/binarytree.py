@@ -4,6 +4,13 @@ from typing import Sequence, TypeVar, Generic
 T = TypeVar('T') # declare type variable
 # todo create comparable interface T extends comparable
 
+class ElementComparator(Generic[T]):
+    '''
+    Can we generify this?
+    '''
+    pass
+
+
 class Tree(Generic[T], metaclass = ABCMeta):
 
     '''
@@ -29,10 +36,15 @@ class Tree(Generic[T], metaclass = ABCMeta):
     # def member(self, element: T) -> T: pass
 
 class NonEmptyBST(Tree, Generic[T]):
-    def __init__(self, element: T):
+    def __init__(self, element):
         self.data  = element
         self.left  = EmptyBST()
         self.right = EmptyBST()
+
+    def __init__(self, data, leftElement:T, rightElement: T):
+        self.data = data
+        self.left = leftElement
+        self.right = rightElement
 
     def cardinality(self):
         '''
@@ -45,10 +57,24 @@ class NonEmptyBST(Tree, Generic[T]):
         return False
 
     def add(self, element: T):
-        super().add(element)
+        if self.data == element:
+             return self
+        else:
+            if element < self.data:
+               return NonEmptyBST(self.data, self.left.add(element), self.right)
+            else:
+                return NonEmptyBST(self.data, self.left, self.right.add(element))
+        pass
 
     def member(self, element: T) -> T:
-        return super().member(element)
+        if self.data == element:
+            return True
+        else:
+            if element < self.data:
+                # check left member
+                return self.left.member(element)
+            else:
+                return self.right.member(element)
 
 
 class EmptyBST(Tree, Generic[T]):
