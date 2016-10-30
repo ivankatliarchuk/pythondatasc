@@ -2,8 +2,7 @@
 from abc import ABCMeta, abstractmethod
 
 # Interface
-class Shape(object):
-    __metaclass__ = ABCMeta
+class Shape(metaclass = ABCMeta): # this class cannot be instantiated
 
     @abstractmethod
     def area(self): pass
@@ -24,5 +23,14 @@ class Rectangle(Shape):
     def perimeter(self):
         return self.width + self.height
 
+'''
+hierarchy
+
+object
+  Shape
+    Rectangle
+
+'''
 rect = Rectangle(5, 6)
 print(rect.area())
+
