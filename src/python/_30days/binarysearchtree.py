@@ -16,6 +16,7 @@ class Solution:
                 cur = self.insert(root.right, data)
                 root.right = cur
         return root
+
     def getHeight(self, root):
         # return the height of the binary search tree
         # go left
@@ -23,6 +24,34 @@ class Solution:
             return -1
         return 1 + (max(self.getHeight(root.left),
                         self.getHeight(root.right)))
+    def levelOrder(self, root):
+        '''
+        level order traversal
+        :param root: root element
+        :return: lever order
+        '''
+        if root != None:
+            self.enqueuCharacter(root)
+            while len(self.__queue) > 0:
+                node = self.dequeueCharacter()
+                print(node.data, end=' ')
+                if node.left != None:
+                    self.enqueuCharacter(node.left)
+                if node.right != None:
+                    self.enqueuCharacter(node.right)
+
+    def __init__(self):
+        self.__queue = []
+
+    def enqueuCharacter(self, char):
+        '''Enqueues a character in the queue instance variable'''
+        self.__queue.append(char)
+
+    def dequeueCharacter(self):
+        '''Dequeues and returns the first character in the queue'''
+        return self.__queue.pop(0)
+
+
 
     def display(self,head):
         current = head
@@ -49,6 +78,8 @@ for i in range(T):
 height = myTree.getHeight(root)
 
 print("height " + str(height))
+
+myTree.levelOrder(root)
 
 
 
