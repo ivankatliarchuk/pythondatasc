@@ -40,6 +40,16 @@ class Solution:
                 if node.right != None:
                     self.enqueuCharacter(node.right)
 
+    def levelOrderSimple(self,root):
+        leafs = [root]
+        while len(leafs) > 0:
+            leaf = leafs.pop(0)
+            print(leaf.data, end=" ")
+            if leaf.left:
+                leafs.append(leaf.left)
+            if leaf.right:
+                leafs.append(leaf.right)
+
     def __init__(self):
         self.__queue = []
 
@@ -50,8 +60,6 @@ class Solution:
     def dequeueCharacter(self):
         '''Dequeues and returns the first character in the queue'''
         return self.__queue.pop(0)
-
-
 
     def display(self,head):
         current = head

@@ -50,9 +50,12 @@ class Solution:
         node = head
         while node:
             if node.next:
+                # if data is equal, reset the next pointer
                 if node.data == node.next.data:
                     node.next = node.next.next
                 else:
+                    # if data is not equal, go
+                    # to the next element
                     node = node.next
             else:
                 node = node.next
