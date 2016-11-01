@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import numpy as np
+
 # generate data
 #year = np.round(np.random.normal(1.75, 0.20, 2000), 2)
 #pop = np.round(np.random.normal(60.32, 15, 5000), 2)

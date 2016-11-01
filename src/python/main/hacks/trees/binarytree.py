@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractmethod
-from typing import Sequence, TypeVar, Generic
+from typing import TypeVar, Generic
 
 T = TypeVar('T') # declare type variable
 # todo create comparable interface T extends comparable

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import sys
 print('hello')
 my_string = "Hello, World!"
 print(my_string)

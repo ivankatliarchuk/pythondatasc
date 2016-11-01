@@ -1,4 +1,3 @@
-import sys
 def validate(source):
     try:
         value = int(source)

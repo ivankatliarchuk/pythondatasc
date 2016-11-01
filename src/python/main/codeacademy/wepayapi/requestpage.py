@@ -1,5 +1,5 @@
-import urllib3 as url
 import requests
+import urllib3 as url
 
 http = url.PoolManager()
 r = http.request('GET', 'http://httpbin.org/robots.txt')
