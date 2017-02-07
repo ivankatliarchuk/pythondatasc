@@ -29,3 +29,5 @@ convert types for array
 
 list(map(int, data))
 '''
+heights = [int(x) for x in input().split()]
+set(map(int, input().split()))
