@@ -63,3 +63,6 @@ print(my_set)
 
 dd = [[].append(arr) for num in range([int(a_temp) for a_temp in input().strip().split(' ')].pop()) for (arr) in array for array in
       input().strip().split(' ')]
+
+count = [0 + 1 if x in A else 0-1 if x in B else 0 + 0 for x in arr]
+print(sum([(i in happy) - (i in grumpy) for i in first]))
