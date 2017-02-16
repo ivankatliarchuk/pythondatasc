@@ -3,6 +3,7 @@ package intro
 
 object App {
   def main(args: Array[String]) {
-    println(io.Source.stdin.getLines().take(2).map(_.toInt).sum)
+    var d = io.Source.stdin.getLines().takeWhile(_.nonEmpty).map(_.toInt).sum
+    println(d)
   }
 }

@@ -2,9 +2,7 @@ package intro
 
 object ListReplication extends App {
 
-  def f(num:Int,arr:List[Int]):List[Int] = {
-    arr.flatMap(e => List.fill(num)(e))
-  }
+  def f(num:Int,arr:List[Int]):List[Int] = arr.flatMap(x => List.fill(num)(x))
 
   def displayResult(arr:List[Int]) = println(f(arr(0).toInt,arr.drop(1)).map(_.toString).mkString("\n"))
 
