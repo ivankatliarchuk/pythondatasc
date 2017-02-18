@@ -1,0 +1,25 @@
+TASK
+For a given integer K, print the frist K rows of Pascals's Triangle. Print the each row with each value
+separated by a single space. The value at the nTh row and rTh column of the triangle is equal to N!/(R!*(N-R)!)
+where indexing start from 0. These values are the binominal coefficients.
+
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+....
+INPUT
+A single line of input, integer K.
+CONSTANTS
+2 <= K <= 10
+OUTPUT
+Output the first K rows of Pascal's triangle.
+SAMPLE INPUT
+4
+SAMPLE OUTPUT
+1
+1 1
+1 2 1
+1 3 3 1
+EXPLANATION
