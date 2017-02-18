@@ -9,4 +9,5 @@ object FirstWorksheet {
 //    x += 1
 //    Thread.sleep(200)
 //  }
+  var l = 3 / 0
 }

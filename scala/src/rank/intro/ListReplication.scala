@@ -1,4 +1,4 @@
-package intro
+package rank.intro
 
 object ListReplication extends App {
 
