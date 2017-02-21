@@ -1,0 +1,18 @@
+"""
+TASK
+You are given a string, str, of length N consisting of lowercase letters of alphabet.
+You have to remove all those characters from str with have already appeared in it. you have to keep
+only first occurance of each letter.
+INPUT
+-----
+CONSTANTS
+-----
+OUTPUT
+-----
+SAMPLE INPUT
+-----
+SAMPLE OUTPUT
+-----
+EXPLANATION
+-----
+"""

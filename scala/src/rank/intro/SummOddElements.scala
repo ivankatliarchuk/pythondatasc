@@ -1,4 +1,4 @@
-package intro
+package rank.intro
 
 import scala.io.Source.stdin
 

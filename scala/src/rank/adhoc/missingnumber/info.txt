@@ -1,0 +1,8 @@
+TASK
+Sometimes you need to compare lists of number, but sorting each one normally will take too much time.
+ Instead you can use alternative methods to find the differences between each list.
+
+Challenge
+Numeros The Artist was arranging two identical lists A and B into specific orders.
+The arrangements of the two arrays were random, Numeros was very proud of his arrangements. Unfortunately,
+some numbers got left out of List A. Can you find the missing numbers from A without messing up his order?
