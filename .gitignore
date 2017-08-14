@@ -146,3 +146,4 @@ src/python/lists/
 /.idea/
 *.iml
 /ve-data-science/
+/python/academy/log
