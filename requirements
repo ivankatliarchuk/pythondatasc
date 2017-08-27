@@ -3,3 +3,5 @@
 #
 ###### Requirements without Version Specifiers ######
 fabric
+bs4
+lxml
